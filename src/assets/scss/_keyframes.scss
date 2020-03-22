@@ -1,0 +1,48 @@
+@keyframes breatheAnimation {
+  0% {
+    transform: scale(0.8);
+  }
+
+  25% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes dotAnimation {
+  0% {
+    top: $box-of-breathe-dot-radius * -1;
+    left: $box-of-breathe-dot-radius * -1;
+  }
+
+  25% {
+    top: $box-of-breathe-dot-radius * -1;
+    left: $box-of-breathe-dot-radius * -1 + $box-of-breathe-size;
+  }
+
+  50% {
+    top: $box-of-breathe-dot-radius * -1 + $box-of-breathe-size;
+    left: $box-of-breathe-dot-radius * -1 + $box-of-breathe-size;
+  }
+
+  75% {
+    top: $box-of-breathe-dot-radius * -1 + $box-of-breathe-size;
+    left: $box-of-breathe-dot-radius * -1;
+  }
+
+  100% {
+    top: $box-of-breathe-dot-radius * -1;
+    left: $box-of-breathe-dot-radius * -1;
+  }
+}

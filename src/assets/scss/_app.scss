@@ -1,0 +1,97 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 454px;
+  position: relative;
+}
+
+#app {
+  max-width: 960px;
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 1.5625rem;
+  line-height: 1em;
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+  text-transform: capitalize;
+}
+
+.description {
+  font-size: 0.75rem;
+  margin: 0 0 2.25rem;
+}
+
+.box-of-breathe {
+  display: inline-block;
+  padding: 1.875rem;
+  position: relative;
+
+  &__box {
+    width: $box-of-breathe-size;
+    height: $box-of-breathe-size;
+    position: relative;
+    background-color: $color-breathe-box-background;
+    border-radius: 0.3125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__dot {
+    background-color: $color-breathe-box-dot;
+    width: $box-of-breathe-dot-radius * 2;
+    height: $box-of-breathe-dot-radius * 2;
+    border-radius: 100%;
+    position: absolute;
+    top: $box-of-breathe-dot-radius * -1;
+    left: $box-of-breathe-dot-radius * -1;
+    animation: dotAnimation 16s linear infinite;
+  }
+
+  &__lung {
+    animation: breatheAnimation 16s linear infinite;
+  }
+
+  &__text {
+    font-size: 1.125rem;
+    line-height: 1em;
+    text-transform: uppercase;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 0 1em;
+    box-sizing: border-box;
+
+    &--upper{
+      top: 0;
+      left: 0;
+    }
+
+    &--right{
+      bottom: -1em;
+      right: 0;
+      transform: rotate(90deg);
+      transform-origin: top right;
+    }
+
+    &--bottom{
+      bottom: 0;
+      left: 0;
+    }
+
+    &--left{
+      bottom: -1em;
+      left: 0;
+      transform: rotate(-90deg);
+      transform-origin: top left;
+    }
+  }
+}
