@@ -1,6 +1,6 @@
 {
   "name": "panic-relief",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A breathing exercise that calms panic attacks.",
   "private": true,
   "scripts": {
